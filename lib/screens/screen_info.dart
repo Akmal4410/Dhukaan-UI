@@ -16,7 +16,9 @@ class _ScreenInfoState extends State<ScreenInfo> {
       appBar: AppBar(
         backgroundColor: Colors.blue.shade700,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: const Icon(Icons.arrow_back),
         ),
         title: const Text("Additional Information"),

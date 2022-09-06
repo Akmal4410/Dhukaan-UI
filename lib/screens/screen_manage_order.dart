@@ -1,3 +1,4 @@
+import 'package:dukaan/screens/screeen_payment.dart';
 import 'package:dukaan/widgets/store_cards.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class _ScreenManageOrderState extends State<ScreenManageOrder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 245, 245, 245),
+      backgroundColor: const Color.fromARGB(255, 245, 245, 245),
       appBar: AppBar(
         backgroundColor: Colors.blue.shade700,
         title: const Text("Manage order"),
@@ -27,33 +28,39 @@ class _ScreenManageOrderState extends State<ScreenManageOrder> {
             mainAxisSpacing: 15,
             childAspectRatio: 1.3,
           ),
-          children: const [
-            StoreCard(
+          children: [
+            const StoreCard(
               labeltext: "Marketing\nDesigns",
               icon: Icons.volume_up,
               color: Colors.orangeAccent,
             ),
-            StoreCard(
-              labeltext: "Online\nPayments",
-              icon: Icons.currency_rupee,
-              color: Colors.green,
+            GestureDetector(
+              child: const StoreCard(
+                labeltext: "Online\nPayments",
+                icon: Icons.currency_rupee,
+                color: Colors.green,
+              ),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (ctx) => const ScreenPayment()));
+              },
             ),
-            StoreCard(
+            const StoreCard(
               labeltext: "Discount\nCoupons",
               icon: Icons.discount,
               color: Colors.orange,
             ),
-            StoreCard(
+            const StoreCard(
               labeltext: "My\nCustomers",
               icon: Icons.group,
               color: Colors.teal,
             ),
-            StoreCard(
+            const StoreCard(
               labeltext: "Store QR\nCode",
               icon: Icons.qr_code_scanner,
               color: Colors.grey,
             ),
-            StoreCard(
+            const StoreCard(
               labeltext: "Extra\nCharges",
               icon: Icons.payments,
               color: Colors.purple,
@@ -62,6 +69,19 @@ class _ScreenManageOrderState extends State<ScreenManageOrder> {
               labeltext: "Order\nForms",
               icon: Icons.article,
               color: Colors.purpleAccent,
+              trailing: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(7),
+                  color: Colors.green,
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    'NEW',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
             ),
           ],
         ),

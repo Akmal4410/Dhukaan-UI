@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      // home: ScreenManageOrder(),
-      // home: ScreenInfo(),
-      home: ScreenPayment(),
+      home: ScreenManageOrder(),
+      //home: ScreenInfo(),
+      //  home: ScreenPayment(),
     );
   }
 }

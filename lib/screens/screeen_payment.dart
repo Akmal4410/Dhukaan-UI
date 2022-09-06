@@ -1,5 +1,7 @@
+import 'package:dukaan/screens/screen_info.dart';
+import 'package:dukaan/widgets/payment_method.dart';
+import 'package:dukaan/widgets/transation_limit.dart';
 import 'package:flutter/material.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
 
 class ScreenPayment extends StatelessWidget {
   const ScreenPayment({super.key});
@@ -11,37 +13,39 @@ class ScreenPayment extends StatelessWidget {
         backgroundColor: Colors.blue.shade700,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         title: const Text('Payments'),
-        actions: const [
+        actions: [
           Padding(
-            padding: EdgeInsets.only(right: 15.0),
-            child: Icon(Icons.info_outline),
+            padding: const EdgeInsets.only(right: 15.0),
+            child: IconButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (ctx) => const ScreenInfo()));
+                },
+                icon: const Icon(Icons.info_outline)),
           ),
         ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(15),
         child: ListView(
-          children: [
-            Container(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Text('Transation Limit'),
-                  Text(
-                      'A free limit up to whichyo will recieve the online payment in the bank'),
-                  LinearPercentIndicator(
-                    barRadius: Radius.circular(10),
-                    width: 300,
-                    lineHeight: 8.0,
-                    percent: 0.3,
-                    progressColor: Colors.blue,
-                  ),
-                ],
-              ),
-            )
+          children: const [
+            TransationLimit(),
+            PaymentMethod(
+              leadingText: 'Default Method',
+              trailingtext: 'Online Payments',
+            ),
+            PaymentMethod(
+              leadingText: 'Payment Profile',
+              trailingtext: 'Bank Account',
+            ),
+            Divider(
+              thickness: 1,
+            ),
           ],
         ),
       ),
