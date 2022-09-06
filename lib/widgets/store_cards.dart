@@ -35,11 +35,11 @@ class StoreCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(7),
                     color: color,
                   ),
-                  height: 40,
-                  width: 40,
+                  height: 35,
+                  width: 35,
                   child: Icon(
                     icon,
-                    size: 35,
+                    size: 30,
                     color: Colors.white,
                   ),
                 ),
@@ -52,7 +52,7 @@ class StoreCard extends StatelessWidget {
             Text(
               labeltext,
               style: const TextStyle(
-                fontSize: 20,
+                fontSize: 19,
                 fontWeight: FontWeight.w500,
               ),
             ),

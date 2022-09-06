@@ -21,13 +21,11 @@ class _ScreenManageOrderState extends State<ScreenManageOrder> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
-        child: GridView(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            crossAxisSpacing: 15,
-            mainAxisSpacing: 15,
-            childAspectRatio: 1.3,
-          ),
+        child: GridView.count(
+          crossAxisCount: 2,
+          crossAxisSpacing: 15,
+          mainAxisSpacing: 15,
+          childAspectRatio: 1.4,
           children: [
             const StoreCard(
               labeltext: "Marketing\nDesigns",

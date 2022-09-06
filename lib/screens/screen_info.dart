@@ -8,7 +8,7 @@ class ScreenInfo extends StatefulWidget {
 }
 
 class _ScreenInfoState extends State<ScreenInfo> {
-  bool isSwitched = false;
+  bool isSwitched = true;
 
   @override
   Widget build(BuildContext context) {
