@@ -40,8 +40,8 @@ class DukaanCard extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 25),
               child: Column(
                 children: [
-                  Image.network(
-                    'https://assets.stickpng.com/images/62b30f71b223544c209f5e55.png',
+                  Image.asset(
+                    'assets/images/dukaan.png',
                     width: 200,
                   ),
                   Text(

@@ -1,5 +1,7 @@
 import 'package:dukaan/widgets/dukaan_card.dart';
 import 'package:dukaan/widgets/features.dart';
+import 'package:dukaan/widgets/frequently_questions.dart';
+import 'package:dukaan/widgets/youtube_video.dart';
 
 import 'package:flutter/material.dart';
 
@@ -21,10 +23,20 @@ class ScreenDukaan extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            DukaanCard(),
-            Features(),
+            const DukaanCard(),
+            const Features(),
             Divider(
-              thickness: 3,
+              thickness: 3.5,
+              color: Colors.grey.shade300,
+            ),
+            YoutubeVideo(),
+            Divider(
+              thickness: 3.5,
+              color: Colors.grey.shade300,
+            ),
+            FrequentlyQuestion(),
+            Divider(
+              thickness: 3.5,
               color: Colors.grey.shade300,
             ),
           ],

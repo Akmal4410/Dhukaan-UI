@@ -16,7 +16,7 @@ class Features extends StatelessWidget {
           Text(
             'Features',
             style: TextStyle(
-              fontSize: 21,
+              fontSize: 20,
               fontWeight: FontWeight.w500,
             ),
           ),
