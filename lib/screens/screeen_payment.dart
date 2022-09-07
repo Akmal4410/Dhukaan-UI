@@ -34,7 +34,7 @@ class ScreenPayment extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: const EdgeInsets.all(15),
+        padding: const EdgeInsets.only(bottom: 15, left: 15, right: 15),
         child: ListView(
           children: const [
             TransationLimit(),

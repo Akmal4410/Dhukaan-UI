@@ -1,3 +1,4 @@
+import 'package:dukaan/screens/screen_dukaan.dart';
 import 'package:dukaan/screens/screen_manage_order.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ScreenManageOrder(),
+      //home: ScreenManageOrder(),
+      home: ScreenDukaan(),
     );
   }
 }
