@@ -18,7 +18,7 @@ class PaymentOverview extends StatelessWidget {
               const Text(
                 'Payment Overview',
                 style: TextStyle(
-                  fontSize: 21.5,
+                  fontSize: 20,
                   fontWeight: FontWeight.w500,
                 ),
               ),

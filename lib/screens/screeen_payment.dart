@@ -1,4 +1,5 @@
 import 'package:dukaan/screens/screen_info.dart';
+import 'package:dukaan/screens/screen_order.dart';
 import 'package:dukaan/widgets/payment_method.dart';
 import 'package:dukaan/widgets/payment_overview.dart';
 import 'package:dukaan/widgets/transation_limit.dart';

@@ -19,7 +19,7 @@ class PaymentMethod extends StatelessWidget {
           Text(
             leadingText,
             style: const TextStyle(
-              fontSize: 20,
+              fontSize: 18,
               fontWeight: FontWeight.w500,
             ),
           ),
