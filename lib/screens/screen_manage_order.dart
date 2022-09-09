@@ -1,4 +1,6 @@
 import 'package:dukaan/screens/screeen_payment.dart';
+import 'package:dukaan/screens/screen_catalogue.dart';
+import 'package:dukaan/screens/screen_dukaan.dart';
 import 'package:dukaan/widgets/store_cards.dart';
 import 'package:flutter/material.dart';
 
@@ -27,10 +29,16 @@ class _ScreenManageOrderState extends State<ScreenManageOrder> {
           mainAxisSpacing: 15,
           childAspectRatio: 1.4,
           children: [
-            const StoreCard(
-              labeltext: "Marketing\nDesigns",
-              icon: Icons.volume_up,
-              color: Colors.orangeAccent,
+            GestureDetector(
+              child: const StoreCard(
+                labeltext: "Marketing\nDesigns",
+                icon: Icons.volume_up,
+                color: Colors.orangeAccent,
+              ),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (ctx) => const ScreenDukaan()));
+              },
             ),
             GestureDetector(
               child: const StoreCard(
@@ -43,10 +51,18 @@ class _ScreenManageOrderState extends State<ScreenManageOrder> {
                     MaterialPageRoute(builder: (ctx) => const ScreenPayment()));
               },
             ),
-            const StoreCard(
-              labeltext: "Discount\nCoupons",
-              icon: Icons.discount,
-              color: Colors.orange,
+            GestureDetector(
+              child: const StoreCard(
+                labeltext: "Discount\nCoupons",
+                icon: Icons.discount,
+                color: Colors.orange,
+              ),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (ctx) => const ScreenCatalogue()));
+              },
             ),
             const StoreCard(
               labeltext: "My\nCustomers",
@@ -94,13 +110,26 @@ class _ScreenManageOrderState extends State<ScreenManageOrder> {
         selectedItemColor: Colors.blue.shade700,
         unselectedItemColor: Colors.grey,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.currency_rupee), label: "Order"),
-          BottomNavigationBarItem(icon: Icon(Icons.list_alt), label: "Product"),
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.manage_search), label: "Manage"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Account"),
+            icon: Icon(Icons.currency_rupee),
+            label: "Order",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.list_alt),
+            label: "Product",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.manage_search),
+            label: "Manage",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: "Account",
+          ),
         ],
       ),
     );

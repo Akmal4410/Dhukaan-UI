@@ -65,7 +65,7 @@ class TransationProducts extends StatelessWidget {
                           children: [
                             Text(
                               "Order #$orderNo",
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 17,
                                 fontWeight: FontWeight.w500,
                               ),
@@ -133,7 +133,7 @@ class TransationProducts extends StatelessWidget {
                 ),
               ),
             ),
-            Divider(
+            const Divider(
               thickness: 1,
             ),
           ],
@@ -142,4 +142,3 @@ class TransationProducts extends StatelessWidget {
     );
   }
 }
-// 'https://rukminim1.flixcart.com/image/832/832/klcmoi80/shirt/y/p/a/m-bnd-volume-marmic-fab-original-imagyhnjztevpzyn.jpeg?q=70'
